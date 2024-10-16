@@ -34,8 +34,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void init() {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-//        toolbar.getNavigationIcon().setColorFilter(ContextCompat.getColor(this, R.color.black), PorterDuff.Mode.SRC_ATOP);
+        setSupportActionBar(toolbar);
+
+        // Remove the default title
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayShowTitleEnabled(false); // Remove the title
+        }
+
+// Set the navigation icon (hamburger icon) if needed
+        toolbar.setNavigationIcon(R.drawable.ic_menu);
+        toolbar.setNavigationOnClickListener(v -> {
+            // Handle navigation (drawer opening, etc.)
+        });
 
         drawerLayout = (DuoDrawerLayout) findViewById(R.id.drawer);
         DuoDrawerToggle drawerToggle = new DuoDrawerToggle(this, drawerLayout, toolbar,

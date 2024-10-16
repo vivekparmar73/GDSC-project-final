@@ -12,4 +12,6 @@
     <color name="background">#D514192C</color>
     <color name="transparent">#00000000</color>
     <color name="blue_100">#702196F3</color>
+    <color name="red">#FF2D55</color>
+    <color name="white_100">#F7F7F7</color>
 </resources>
